@@ -11,7 +11,7 @@ $('body').keydown(function () {
   }
 });
 function playSound(name) {
-  const audio = new Audio(`/sounds/${name}.mp3`);
+  const audio = new Audio(`sounds/${name}.mp3`);
   audio.play();
 }
 $('.btn').click(handler);
@@ -47,7 +47,6 @@ function checkAnswer(currentLevel) {
       $('#level-title').text('Level ' + level);
     }
   } else {
-    console.log('wrong');
     playSound('wrong');
     $('body').addClass('game-over');
     setTimeout(() => {
